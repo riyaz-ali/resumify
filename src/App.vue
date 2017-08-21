@@ -13,6 +13,11 @@
 
       <div ref="resume" class="resume"><router-view></router-view></div>
     </div>
+
+    <footer class="resumify footer">
+      <span><i class="fa fa-github fa-2x"></i></span>
+      <span><a href="/">resumify!</a> <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="https://github.com/riyaz-ali" target="_blank">riyaz-ali</a></span>
+    </footer>
   </div>
 </template>
 
@@ -85,5 +90,16 @@
     .resume {
       background-color: #fff;
     }
+  }
+
+  .resumify.footer {
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    i.fa-heart { color: #f44336; }
+    a {font-weight: 700;}
   }
 </style>

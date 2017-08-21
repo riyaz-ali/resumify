@@ -35,6 +35,10 @@
       </div>
 
     </div>
+
+    <div class="hidden-snapshot template default footer">
+      Template designed by <a target="_blank" href="https://github.com/riyaz-ali">riyaz-ali</a>
+    </div>
   </div>
 </template>
 
@@ -98,6 +102,18 @@
       border-right: 1px solid #eee;
       display: flex;
       flex-direction: column;
+    }
+
+    &.footer {
+      background-color: #eee;
+      padding: 5px;
+      color: rgba(0,0,0,0.5);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.8em;
+
+      a { font-weight: 700; text-transform: none }
+
     }
   }
 </style>
