@@ -48,7 +48,8 @@ module.exports = {
   externals: {
     // provided (loaded) externally, this will allow us to leverage global cdn
     'vue': 'Vue',
-    'vue-router': 'VueRouter'
+    'vue-router': 'VueRouter',
+    'html2canvas': 'html2canvas'
   },
   devtool: "#eval-source-map",
   devServer: {
