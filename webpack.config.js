@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: (!BUILD_GH)?path.resolve(__dirname, 'dist'):path.resolve(__dirname, "docs/dist/"),
-    publicPath: "/dist/",
+    publicPath: (!BUILD_GH)?"/dist/":"dist/",
     filename: "bundle.[hash].js",
     pathinfo: true
   },
