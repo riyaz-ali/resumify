@@ -29,7 +29,9 @@
     },
     methods: {
       onSave: function(){
+        document.body.classList.add('taking-snapshot');
         html2canvas(this.$refs.resume).then(canvas => {
+          document.body.classList.remove('taking-snapshot')
           canvas.toBlob(blob => {
             FileSaver.saveAs(blob, 'resume.jpg')
           }, 'image/jpeg', 1)
@@ -46,6 +48,14 @@
   body, html {
     padding: 0px 15px;
     background-color: #efefef;
+  }
+
+  // hide dynamic elements when taking snapshot
+  // add class .hidden-snapshot to elements that you want to hide
+  body.taking-snapshot {
+    .hidden-snapshot {
+      display: none;
+    }
   }
 
   .resumify.heading {
@@ -66,8 +76,8 @@
     margin-top: 0.75em;
     margin-bottom: 25px;
     position: relative;
-    min-height: 100px;
     border-radius: 4px;
+    width: 21cm;
     background-color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
